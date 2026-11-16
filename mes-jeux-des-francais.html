@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jeux de Français</title>
+<meta name="apple-mobile-web-app-title" content="Français">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#FFFBF2">
+<link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,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">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --le:#2F6FDE; --le-soft:#E2ECFF;
+    --la:#E8457A; --la-soft:#FFE4EC;
+    --sun:#F5A623; --sun-soft:#FFF0DC;
+    --ok:#2EAA62; --ok-soft:#DDF5E6;
+    --vio:#8A5CE0; --vio-soft:#EEE4FF;
+    --ink:#2B2B3A; --mute:#7A7A8C; --paper:#FFFBF2;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--paper);color:var(--ink);font-family:'Fredoka',system-ui,sans-serif;-webkit-tap-highlight-color:transparent}
+  body{min-height:100vh}
+  button{font-family:inherit;cursor:pointer;border:none;color:inherit}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:760px;margin:0 auto;padding:18px 16px 40px}
+  #confetti{position:fixed;inset:0;pointer-events:none;display:none;z-index:50}
+
+  /* ---------- HUB ---------- */
+  .hub-head{text-align:center;padding:22px 0 26px}
+  .hub-head .flag{font-size:46px;line-height:1}
+  .hub-head h1{font-size:clamp(30px,7vw,46px);font-weight:700;margin-top:6px;letter-spacing:-.5px}
+  .hub-head h1 .b{color:var(--le)} .hub-head h1 .w{color:#B9B9C6} .hub-head h1 .r{color:var(--la)}
+  .hub-head p{color:var(--mute);font-size:17px;margin-top:4px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px}
+  .card{border-radius:22px;padding:20px 18px;color:#fff;background:var(--bg);box-shadow:0 6px 0 rgba(0,0,0,.12);display:flex;flex-direction:column;gap:6px;transition:transform .15s;min-height:200px}
+  .card:hover{transform:translateY(-3px) rotate(-.5deg)}
+  .card:active{transform:translateY(2px)}
+  .card .ce{font-size:42px}
+  .card h2{font-size:26px;font-weight:700}
+  .card p{font-size:15px;opacity:.95;line-height:1.35;flex:1}
+  .card .cp{background:rgba(255,255,255,.25);border-radius:999px;padding:4px 12px;font-weight:600;align-self:flex-start;font-size:15px}
+  .card.soon{background:transparent;border:3px dashed #D6D3C8;color:var(--mute);box-shadow:none}
+  .card.soon:hover{transform:none}
+  .mute{position:fixed;right:14px;bottom:14px;width:46px;height:46px;border-radius:50%;background:#fff;box-shadow:0 3px 10px rgba(0,0,0,.12);font-size:20px;z-index:20}
+
+  /* ---------- TOP BAR ---------- */
+  .top{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+  .back{background:#fff;border-radius:999px;padding:8px 14px;font-weight:600;font-size:15px;box-shadow:0 2px 0 rgba(0,0,0,.08);white-space:nowrap}
+  .top .t{flex:1;font-size:22px;font-weight:700;text-align:center}
+  .chip{background:#fff;border-radius:999px;padding:7px 12px;font-weight:600;box-shadow:0 2px 0 rgba(0,0,0,.08);white-space:nowrap}
+
+  /* ---------- LEVEL MAP ---------- */
+  .legend{display:flex;gap:10px;justify-content:center;margin:2px 0 18px;flex-wrap:wrap}
+  .pill{border-radius:999px;padding:6px 14px;font-weight:600;color:#fff}
+  .pill.m{background:var(--le)} .pill.f{background:var(--la)}
+  .levels{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px}
+  .lvl{background:#fff;border-radius:20px;padding:14px 12px;text-align:center;box-shadow:0 5px 0 rgba(0,0,0,.08);border:3px solid transparent;transition:transform .12s;position:relative}
+  .lvl:not(.locked):hover{transform:translateY(-3px);border-color:var(--sun)}
+  .lvl .n{position:absolute;top:8px;left:10px;font-weight:700;color:var(--mute);font-size:14px}
+  .lvl .e{font-size:38px}
+  .lvl .nm{font-weight:700;font-size:17px;margin-top:2px}
+  .lvl .sb{color:var(--mute);font-size:13px;margin-top:2px;min-height:17px}
+  .lvl .st{font-size:22px;letter-spacing:2px;margin-top:4px;color:#E2DFD6}
+  .lvl .st .on{color:var(--sun)}
+  .lvl.locked{opacity:.5;cursor:not-allowed}
+  .lvl.locked .e{filter:grayscale(1)}
+  .lvl.boss{background:linear-gradient(135deg,#FFF0DC,#FFE4EC)}
+  .hint{text-align:center;color:var(--mute);margin-top:18px;font-size:14px}
+
+  /* ---------- INTRO ---------- */
+  .intro{text-align:center}
+  .big{font-size:64px;line-height:1.1}
+  .intro h2{font-size:28px;margin:6px 0 2px}
+  .intro .lead{color:var(--mute);font-size:17px;margin-bottom:14px}
+  .rules{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin:0 auto 16px;max-width:620px}
+  .rule{border-radius:16px;padding:10px;border:3px solid;background:#fff}
+  .rule.f{border-color:var(--la);background:var(--la-soft)} .rule.m{border-color:var(--le);background:var(--le-soft)}
+  .rule b{display:block;font-size:20px}
+  .rule.f b{color:var(--la)} .rule.m b{color:var(--le)}
+  .rule .ar{font-weight:700;font-size:15px}
+  .rule small{display:block;color:var(--mute);font-size:14px;margin-top:2px}
+  .tip{background:var(--sun-soft);border:3px dashed var(--sun);border-radius:16px;padding:12px 14px;max-width:620px;margin:0 auto 18px;font-size:16px;line-height:1.4}
+  .big-btn{background:var(--ok);color:#fff;font-size:22px;font-weight:700;padding:14px 34px;border-radius:999px;box-shadow:0 5px 0 #1E8A4C}
+  .big-btn:active{transform:translateY(3px);box-shadow:0 2px 0 #1E8A4C}
+  .big-btn.alt{background:#fff;color:var(--ink);box-shadow:0 5px 0 #D6D3C8}
+  .big-btn.blue{background:var(--le);box-shadow:0 5px 0 #1F55B5}
+
+  /* ---------- PLAY ---------- */
+  .prog{flex:1;height:14px;background:#EEEAE0;border-radius:999px;overflow:hidden}
+  .prog div{height:100%;background:linear-gradient(90deg,var(--sun),var(--la));border-radius:999px;transition:width .3s}
+  .qc{text-align:center;color:var(--mute);font-weight:500;margin-bottom:10px}
+  .wcard{background:#fff;border-radius:26px;padding:34px 16px 28px;text-align:center;box-shadow:0 6px 0 rgba(0,0,0,.08);border:4px solid transparent;transition:border-color .2s, background .2s;position:relative;overflow:hidden}
+  .wcard .w{font-size:clamp(40px,11vw,62px);font-weight:700;letter-spacing:-.5px;word-break:break-word}
+  .wcard .en{color:var(--mute);font-size:17px;margin-top:2px}
+  .wcard.good{border-color:var(--ok);background:var(--ok-soft)}
+  .wcard.bad{border-color:#E04B3A;background:#FFE8E4}
+  .wcard.oops{border-color:var(--sun);background:var(--sun-soft)}
+  .wcard.shake{animation:shake .4s}
+  .wcard.pop{animation:pop .35s}
+  @keyframes shake{0%,100%{transform:translateX(0)}20%,60%{transform:translateX(-8px)}40%,80%{transform:translateX(8px)}}
+  @keyframes pop{50%{transform:scale(1.05)}}
+  .timer{position:absolute;left:0;bottom:0;height:7px;background:var(--sun);width:100%}
+  .ans{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .ab{border-radius:22px;padding:18px 8px;color:#fff;font-size:15px;transition:transform .1s, opacity .2s}
+  .ab b{display:block;font-size:40px;line-height:1.05;font-weight:700}
+  .ab.m{background:var(--le);box-shadow:0 6px 0 #1F55B5}
+  .ab.f{background:var(--la);box-shadow:0 6px 0 #B92D5C}
+  .ab:active{transform:translateY(4px)}
+  .ab.dim{opacity:.35}
+  .ab.pick{outline:4px solid var(--ink);outline-offset:3px}
+  .keys{text-align:center;color:#B9B9C6;font-size:13px;margin-top:10px}
+  .fb{margin-top:16px;border-radius:20px;padding:14px 16px;animation:slide .25s ease-out}
+  @keyframes slide{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+  .fb.good{background:var(--ok-soft);border:3px solid var(--ok)}
+  .fb.bad{background:#FFE8E4;border:3px solid #E04B3A}
+  .fb.oops{background:var(--sun-soft);border:3px solid var(--sun)}
+  .fb .ft{font-weight:700;font-size:20px}
+  .fb .fp{font-size:26px;font-weight:600;margin:4px 0}
+  .fb .fn{font-size:16px;line-height:1.4}
+  .fb .fx{font-size:14px;color:var(--mute);margin-top:4px}
+  .art{font-weight:700}
+  .art.m{color:var(--le)} .art.f{color:var(--la)}
+  .indef{color:var(--mute);font-size:.7em;font-weight:500}
+  .next{display:block;margin:14px auto 0}
+
+  /* ---------- RESULTS ---------- */
+  .res{text-align:center}
+  .res h2{font-size:34px;margin-top:4px}
+  .res .score{font-size:20px;color:var(--mute)}
+  .stars{font-size:52px;letter-spacing:6px;color:#E2DFD6;margin:6px 0}
+  .stars .on{color:var(--sun);display:inline-block;animation:pop .5s}
+  .res .msg{font-size:18px;margin-bottom:6px}
+  .res .oc{display:inline-block;background:var(--sun-soft);border-radius:999px;padding:6px 14px;font-weight:600;margin:6px 0 14px}
+  .review{background:#fff;border-radius:20px;padding:14px 16px;text-align:left;max-width:520px;margin:0 auto 18px;box-shadow:0 4px 0 rgba(0,0,0,.06)}
+  .review h3{font-size:18px;margin-bottom:6px}
+  .review li{list-style:none;padding:6px 0;border-top:1px solid #F0ECE2;font-size:18px}
+  .review li:first-of-type{border-top:none}
+  .review li small{display:block;color:var(--mute);font-size:14px}
+  .btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .big-btn.red{background:#E04B3A;box-shadow:0 5px 0 #B23526}
+  .foot{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-top:22px;padding-top:12px;border-top:2px dashed #E6E1D4;color:var(--mute);font-size:14px}
+  .link{background:none;color:#C0392B;font-weight:600;font-size:14px;text-decoration:underline;padding:4px 0}
+  .modal{position:fixed;inset:0;background:rgba(43,43,58,.45);display:flex;align-items:center;justify-content:center;padding:20px;z-index:60;animation:slide .2s}
+  .mbox{background:#fff;border-radius:24px;padding:22px 20px;max-width:380px;text-align:center}
+  .mbox h3{font-size:22px;margin:4px 0}
+  .mbox p{color:var(--mute);margin-bottom:16px;line-height:1.4}
+  .mbox .big-btn{font-size:18px;padding:11px 22px}
+</style>
+</head>
+<body>
+<div id="app" class="wrap"></div>
+<canvas id="confetti"></canvas>
+<button class="mute" id="mute" aria-label="Sound on/off"></button>
+
+<script>
+/* ============ helpers ============ */
+const app = document.getElementById('app');
+const store = {
+  get(k, d){ try{ const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; }catch(e){ return d; } },
+  set(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+};
+const shuffle = a => { a = a.slice(); for(let i=a.length-1;i>0;i--){ const j=Math.random()*(i+1)|0; [a[i],a[j]]=[a[j],a[i]]; } return a; };
+const take = (a, n) => shuffle(a).slice(0, Math.max(0, n));
+let timers = [];
+const later = (fn, ms) => timers.push(setTimeout(fn, ms));
+const every = (fn, ms) => timers.push(setInterval(fn, ms));
+function stopTimers(){ timers.forEach(t => { clearTimeout(t); clearInterval(t); }); timers = []; }
+let keyHandler = null;
+let view = 'hub';
+document.addEventListener('keydown', e => keyHandler && keyHandler(e));
+
+/* ============ progress (account-synced, device cache fallback) ============ */
+const Progress = (() => {
+  const LKEY = 'fg.progress';
+  let data = store.get(LKEY, null);
+  if(!data){ // migrate the first version's save
+    data = {games:{}, updatedAt:0};
+    const old = store.get('fg.leoula', null);
+    if(old) data.games['le-ou-la'] = old;
+  }
+  let ref = null, queue = Promise.resolve(), listeners = [];
+  let status = 'device'; // 'device' | 'loading' | 'cloud'
+
+  const clone = o => JSON.parse(JSON.stringify(o));
+  const notify = () => listeners.forEach(f => f());
+  function persist(){
+    store.set(LKEY, data);
+    if(!ref) return;
+    const body = clone(data);
+    queue = queue.then(() => ref.set(body)).catch(() => {});
+  }
+
+  async function connect(){
+    try{
+      if(!window.claude || !claude.use) return;
+      status = 'loading';
+      const [db, user] = await Promise.all([claude.use('db'), claude.use('user')]);
+      const id = db && user ? await user.id() : null;
+      if(!id){ status = 'device'; notify(); return; }
+      const r = db.doc('data/users/' + id + '/progress');
+      const snap = await Promise.race([r.get(), new Promise((_, no) => setTimeout(() => no('timeout'), 10000))]);
+      const cloud = snap.exists ? snap.data() : null;
+      ref = r; status = 'cloud';
+      if(cloud && (cloud.updatedAt || 0) >= (data.updatedAt || 0)){
+        data = clone(cloud); if(!data.games) data.games = {};
+        store.set(LKEY, data);
+      } else {
+        persist(); // device is newer (or account empty): push it up
+      }
+      notify();
+    }catch(e){ ref = null; status = 'device'; notify(); }
+  }
+
+  return {
+    get: (game, def) => clone(data.games[game] || def),
+    set(game, val){ data.games[game] = clone(val); data.updatedAt = Date.now(); persist(); },
+    resetGame(game){ delete data.games[game]; data.updatedAt = Date.now(); persist(); notify(); },
+    resetAll(){ data.games = {}; data.updatedAt = Date.now(); persist(); notify(); },
+    status: () => status,
+    onChange: f => listeners.push(f),
+    connect,
+  };
+})();
+
+/* ============ confirm dialog (in-page) ============ */
+function confirmBox(title, text, yesLabel, onYes){
+  const d = document.createElement('div');
+  d.className = 'modal';
+  d.innerHTML = `<div class="mbox"><div class="big">🤔</div><h3>${title}</h3><p>${text}</p>
+    <div class="btns"><button class="big-btn alt" data-a="no">Cancel</button><button class="big-btn red" data-a="yes">${yesLabel}</button></div></div>`;
+  d.onclick = e => {
+    const a = e.target.dataset && e.target.dataset.a;
+    if(e.target === d || a === 'no') d.remove();
+    if(a === 'yes'){ d.remove(); onYes(); }
+  };
+  document.body.appendChild(d);
+}
+
+/* ============ sound ============ */
+let muted = store.get('fg.muted', false);
+let actx = null;
+function tone(freqs, step=0.11, type='sine', vol=0.14){
+  if(muted) return;
+  try{
+    actx = actx || new (window.AudioContext || window.webkitAudioContext)();
+    const t0 = actx.currentTime;
+    freqs.forEach((f, i) => {
+      const o = actx.createOscillator(), g = actx.createGain();
+      o.type = type; o.frequency.value = f;
+      const s = t0 + i*step;
+      g.gain.setValueAtTime(0.0001, s);
+      g.gain.exponentialRampToValueAtTime(vol, s + 0.02);
+      g.gain.exponentialRampToValueAtTime(0.0001, s + step + 0.08);
+      o.connect(g); g.connect(actx.destination);
+      o.start(s); o.stop(s + step + 0.1);
+    });
+  }catch(e){}
+}
+const sfx = {
+  good: () => tone([660, 880]),
+  oops: () => tone([523, 659, 784, 1047], 0.08, 'triangle'),
+  bad:  () => tone([330, 247], 0.16, 'triangle', 0.18),
+  win:  () => tone([523, 659, 784, 1047, 1319], 0.1, 'triangle'),
+};
+const muteBtn = document.getElementById('mute');
+function paintMute(){ muteBtn.textContent = muted ? '🔇' : '🔊'; }
+muteBtn.onclick = () => { muted = !muted; store.set('fg.muted', muted); paintMute(); if(!muted) sfx.good(); };
+paintMute();
+
+/* ============ confetti ============ */
+function confetti(){
+  const c = document.getElementById('confetti'), x = c.getContext('2d');
+  c.width = innerWidth; c.height = innerHeight; c.style.display = 'block';
+  const cols = ['#2F6FDE','#E8457A','#F5A623','#2EAA62','#8A5CE0'];
+  const ps = Array.from({length:150}, () => ({
+    x: Math.random()*c.width, y: -20 - Math.random()*c.height*0.6,
+    vx: (Math.random()-.5)*3, vy: 2 + Math.random()*3,
+    r: Math.random()*6.28, vr: (Math.random()-.5)*.3,
+    s: 7 + Math.random()*7, c: cols[Math.random()*cols.length|0]
+  }));
+  let t = 0;
+  (function f(){
+    x.clearRect(0,0,c.width,c.height);
+    ps.forEach(p => { p.x+=p.vx; p.y+=p.vy; p.vy+=0.03; p.r+=p.vr;
+      x.save(); x.translate(p.x,p.y); x.rotate(p.r); x.fillStyle=p.c; x.fillRect(-p.s/2,-p.s/4,p.s,p.s/2); x.restore(); });
+    if(++t < 240) requestAnimationFrame(f); else { x.clearRect(0,0,c.width,c.height); c.style.display='none'; }
+  })();
+}
+
+/* =====================================================================
+   GAME 1 — LE OU LA ?
+   ===================================================================== */
+const LeOuLa = (() => {
+  const KEY = 'fg.leoula';
+
+  // short = how the rule is named, g = gender the rule gives, note = the rule in one line
+  const RULES = {
+    tion:  {short:'-tion', g:'f', note:'-tion words are always feminine.'},
+    sion:  {short:'-sion', g:'f', note:'-sion words are feminine.'},
+    ment:  {short:'-ment', g:'m', note:'-ment words are (almost) always masculine.'},
+    te:    {short:'-té', g:'f', note:'-té words are feminine.'},
+    ure:   {short:'-ure', g:'f', note:'-ure words are feminine.'},
+    age:   {short:'-age', g:'m', note:'-age words are masculine.'},
+    eau:   {short:'-eau', g:'m', note:'-eau words are masculine.'},
+    ence:  {short:'-ence / -ance', g:'f', note:'-ence and -ance words are feminine.'},
+    dbl:   {short:'double letter + e', g:'f', note:'A double letter + e (-elle, -enne, -onne, -ette, -esse) means feminine.'},
+    isme:  {short:'-isme', g:'m', note:'-isme words are masculine.'},
+    et:    {short:'-et', g:'m', note:'-et words are masculine.'},
+    ie:    {short:'-ie', g:'f', note:'-ie words are feminine.'},
+    ee:    {short:'-ée', g:'f', note:'-ée words are feminine.'},
+    oir:   {short:'-oir', g:'m', note:'-oir words are masculine.'},
+    ier:   {short:'-ier / -er', g:'m', note:'-ier and -er words are masculine.'},
+    ade:   {short:'-ade / -ude', g:'f', note:'-ade and -ude words are feminine.'},
+    euse:  {short:'-euse / -ière', g:'f', note:'-euse and -ière words are feminine.'},
+    al:    {short:'-al', g:'m', note:'-al words are masculine.'},
+    ou:    {short:'-ou / -o', g:'m', note:'-ou and -o words are masculine.'},
+    cons:  {short:'consonant-ending', g:'m', note:'Words ending in a consonant are usually masculine.'},
+    day:   {short:'days', g:'m', note:'Days of the week are always masculine.'},
+    month: {short:'months', g:'m', note:'Months are always masculine.'},
+    season:{short:'seasons', g:'m', note:'Seasons are always masculine.'},
+    lang:  {short:'languages', g:'m', note:'Languages are always masculine.'},
+    colour:{short:'colours', g:'m', note:'Colours (as nouns) are always masculine.'},
+    eng:   {short:'English words', g:'m', note:'English words used in French are masculine.'},
+    ctyf:  {short:'countries ending in -e', g:'f', note:'Countries ending in -e are feminine.'},
+    ctym:  {short:'other countries', g:'m', note:'Countries not ending in -e are masculine.'},
+  };
+
+  // word | gender | rule (! = Oops word that breaks that rule) | English | extra note
+  const LEVELS = [
+    {name:'Premiers pas', emoji:'🐣', sub:'-tion · -sion · -ment', rules:['tion','sion','ment'], data:`
+natation|f|tion|swimming
+récréation|f|tion|break time
+question|f|tion|question
+direction|f|tion|direction
+conversation|f|tion|conversation
+punition|f|tion|punishment
+invitation|f|tion|invitation
+information|f|tion|information
+télévision|f|sion|television
+décision|f|sion|decision
+émission|f|sion|TV programme
+révision|f|sion|revision
+explosion|f|sion|explosion
+moment|m|ment|moment
+appartement|m|ment|flat / apartment
+vêtement|m|ment|piece of clothing
+monument|m|ment|monument
+médicament|m|ment|medicine
+bâtiment|m|ment|building
+instrument|m|ment|instrument
+sentiment|m|ment|feeling
+jument|f|!ment|mare (female horse)|It's a female horse, so it's feminine!`},
+
+    {name:'À la plage', emoji:'🏖️', sub:'-té · -ure · -age · -eau', rules:['te','ure','age','eau'], data:`
+liberté|f|te|freedom
+beauté|f|te|beauty
+santé|f|te|health
+vérité|f|te|truth
+université|f|te|university
+électricité|f|te|electricity
+curiosité|f|te|curiosity
+voiture|f|ure|car
+confiture|f|ure|jam
+nature|f|ure|nature
+peinture|f|ure|paint
+ceinture|f|ure|belt
+chaussure|f|ure|shoe
+fromage|m|age|cheese
+voyage|m|age|trip
+garage|m|age|garage
+village|m|age|village
+visage|m|age|face
+nuage|m|age|cloud
+orage|m|age|storm
+bateau|m|eau|boat
+gâteau|m|eau|cake
+chapeau|m|eau|hat
+cadeau|m|eau|present
+château|m|eau|castle
+oiseau|m|eau|bird
+tableau|m|eau|board / painting
+été|m|!te|summer
+côté|m|!te|side
+plage|f|!age|beach
+page|f|!age|page
+image|f|!age|picture
+cage|f|!age|cage
+eau|f|!eau|water
+peau|f|!eau|skin`},
+
+    {name:'Le pique-nique', emoji:'🧺', sub:'-ence · double letter · -isme · -et', rules:['ence','dbl','isme','et'], data:`
+science|f|ence|science
+patience|f|ence|patience
+enfance|f|ence|childhood
+chance|f|ence|luck
+confiance|f|ence|trust
+naissance|f|ence|birth
+distance|f|ence|distance
+ambulance|f|ence|ambulance
+baguette|f|dbl|baguette
+chaussette|f|dbl|sock
+fourchette|f|dbl|fork
+assiette|f|dbl|plate
+poubelle|f|dbl|bin
+personne|f|dbl|person
+vitesse|f|dbl|speed
+tristesse|f|dbl|sadness
+couronne|f|dbl|crown
+vaisselle|f|dbl|the dishes
+tourisme|m|isme|tourism
+cyclisme|m|isme|cycling
+alpinisme|m|isme|mountain climbing
+journalisme|m|isme|journalism
+jouet|m|et|toy
+billet|m|et|ticket
+poulet|m|et|chicken
+bracelet|m|et|bracelet
+carnet|m|et|notebook
+paquet|m|et|packet
+robinet|m|et|tap
+silence|m|!ence|silence
+squelette|m|!dbl|skeleton
+forêt|f|!et|forest`},
+
+    {name:'Au musée', emoji:'🏛️', sub:'-ie · -ée · -oir · -ier', rules:['ie','ee','oir','ier'], data:`
+boulangerie|f|ie|bakery
+vie|f|ie|life
+pluie|f|ie|rain
+librairie|f|ie|bookshop
+sortie|f|ie|exit
+géographie|f|ie|geography
+biologie|f|ie|biology
+idée|f|ee|idea
+journée|f|ee|day
+année|f|ee|year
+soirée|f|ee|evening / party
+entrée|f|ee|entrance
+fusée|f|ee|rocket
+poupée|f|ee|doll
+miroir|m|oir|mirror
+soir|m|oir|evening
+couloir|m|oir|corridor
+trottoir|m|oir|footpath
+devoir|m|oir|homework
+tiroir|m|oir|drawer
+cahier|m|ier|copybook
+panier|m|ier|basket
+papier|m|ier|paper
+escalier|m|ier|stairs
+clavier|m|ier|keyboard
+déjeuner|m|ier|lunch
+dîner|m|ier|dinner
+parapluie|m|!ie|umbrella
+génie|m|!ie|genius
+incendie|m|!ie|big fire
+musée|m|!ee|museum
+lycée|m|!ee|secondary school
+mer|f|!ier|sea`},
+
+    {name:'Au parc', emoji:'🌳', sub:'-ade · -euse · -al · -o · consonants', rules:['ade','euse','al','ou','cons'], data:`
+salade|f|ade|salad
+promenade|f|ade|walk
+limonade|f|ade|lemonade
+habitude|f|ade|habit
+solitude|f|ade|loneliness
+attitude|f|ade|attitude
+chanteuse|f|euse|singer (woman)
+danseuse|f|euse|dancer (woman)
+coiffeuse|f|euse|hairdresser (woman)
+rivière|f|euse|river
+lumière|f|euse|light
+cuisinière|f|euse|cooker
+cheval|m|al|horse
+journal|m|al|newspaper
+hôpital|m|al|hospital
+animal|m|al|animal
+festival|m|al|festival
+canal|m|al|canal
+genou|m|ou|knee
+bijou|m|ou|jewel
+caillou|m|ou|pebble
+vélo|m|ou|bike
+piano|m|ou|piano
+stylo|m|ou|pen
+lit|m|cons|bed
+sac|m|cons|bag
+chat|m|cons|cat
+parc|m|cons|park
+pont|m|cons|bridge
+lac|m|cons|lake
+train|m|cons|train
+chien|m|cons|dog
+stade|m|!ade|stadium
+photo|f|!ou|photo|It's short for la photographie.
+radio|f|!ou|radio
+moto|f|!ou|motorbike|It's short for la motocyclette.
+nuit|f|!cons|night
+fin|f|!cons|end
+souris|f|!cons|mouse
+dent|f|!cons|tooth`},
+
+    {name:'Tour du monde', emoji:'🌍', sub:'days · countries · more', rules:['day','month','season','lang','colour','eng','ctyf','ctym'], data:`
+lundi|m|day|Monday
+samedi|m|day|Saturday
+mercredi|m|day|Wednesday
+janvier|m|month|January
+mai|m|month|May
+juillet|m|month|July
+printemps|m|season|spring
+hiver|m|season|winter
+automne|m|season|autumn|It ends in -e, but seasons are always masculine!
+français|m|lang|French
+anglais|m|lang|English
+rouge|m|colour|red|It ends in -e, but colours are always masculine!
+bleu|m|colour|blue
+week-end|m|eng|weekend
+sandwich|m|eng|sandwich
+football|m|eng|football
+parking|m|eng|car park
+France|f|ctyf|France
+Irlande|f|ctyf|Ireland
+Espagne|f|ctyf|Spain
+Italie|f|ctyf|Italy
+Belgique|f|ctyf|Belgium
+Chine|f|ctyf|China
+Allemagne|f|ctyf|Germany
+Angleterre|f|ctyf|England
+Suisse|f|ctyf|Switzerland
+Canada|m|ctym|Canada
+Japon|m|ctym|Japan
+Portugal|m|ctym|Portugal
+Brésil|m|ctym|Brazil
+Maroc|m|ctym|Morocco
+Mexique|m|!ctyf|Mexico
+Cambodge|m|!ctyf|Cambodia
+Mozambique|m|!ctyf|Mozambique`},
+
+    {name:'Chasse aux Oops', emoji:'🕵️', sub:'rule-breakers!', rules:[], special:'oops'},
+    {name:'Le Grand Défi', emoji:'🏆', sub:'15 words · timed', rules:[], special:'boss'},
+  ];
+
+  LEVELS.forEach(L => {
+    L.words = (L.data || '').trim().split('\n').filter(Boolean).map(line => {
+      const [w, g, r, en, extra] = line.trim().split('|');
+      const ex = r.startsWith('!');
+      return {w, g, rule: ex ? r.slice(1) : r, ex, en, extra};
+    });
+  });
+  const ALL = LEVELS.flatMap(L => L.words);
+  const COUNTRY = new Set(['ctyf','ctym']);
+
+  const gname = g => g === 'm' ? 'masculine' : 'feminine';
+  const elides = w => /^[aeiouyhéèêâîôûœ]/i.test(w);
+  function phrase(q){
+    if(q.rule === 'month') return `${q.w} <span class="indef">(<span class="art m">masculine</span>)</span>`;
+    const def = elides(q.w) ? "l'" : (q.g === 'm' ? 'le ' : 'la ');
+    let s = `<span class="art ${q.g}">${def}</span>${q.w}`;
+    if(elides(q.w) && !COUNTRY.has(q.rule))
+      s += ` <span class="indef">(<span class="art ${q.g}">${q.g==='m'?'un':'une'}</span> ${q.w})</span>`;
+    return s;
+  }
+  const exampleFor = key => (ALL.find(w => w.rule === key && !w.ex) || {}).w;
+
+  const ID = 'le-ou-la';
+  const save = () => { const d = Progress.get(ID, {stars:[]}); d.stars = LEVELS.map((_, i) => d.stars[i] || 0); return d; };
+  const progress = () => { const s = save().stars; return {got: s.reduce((a,b)=>a+b,0), max: LEVELS.length*3}; };
+  const starStr = n => [0,1,2].map(i => `<span class="${i<n?'on':''}">★</span>`).join('');
+
+  /* ---------- level map ---------- */
+  function renderMap(){
+    keyHandler = null; view = 'map';
+    const st = save().stars, p = progress();
+    app.innerHTML = `
+      <div class="top"><a class="back" href="#">← Games</a><div class="t">Le ou La ?</div><div class="chip">⭐ ${p.got}/${p.max}</div></div>
+      <div class="legend"><span class="pill m">LE / UN = masculine</span><span class="pill f">LA / UNE = feminine</span></div>
+      <div class="levels">
+        ${LEVELS.map((L,i) => {
+          const locked = i > 0 && !st[i-1];
+          return `<button class="lvl ${locked?'locked':''} ${L.special?'boss':''}" data-i="${i}" ${locked?'aria-disabled="true"':''}>
+            <div class="n">${i+1}</div><div class="e">${locked?'🔒':L.emoji}</div>
+            <div class="nm">${L.name}</div><div class="sb">${L.sub}</div>
+            <div class="st">${starStr(st[i])}</div></button>`;
+        }).join('')}
+      </div>
+      <p class="hint">Score 7 out of 10 to unlock the next level.</p>
+      <div class="foot"><span class="sync">${syncLabel()}</span>
+        ${p.got ? '<button class="link" id="rst">↺ Reset this game</button>' : ''}</div>`;
+    const rst = document.getElementById('rst');
+    if(rst) rst.onclick = () => confirmBox('Reset Le ou La ?', 'All stars will be cleared and only Level 1 will be open again.', 'Reset game', () => { Progress.resetGame(ID); renderMap(); });
+    app.querySelectorAll('.lvl').forEach(b => b.onclick = () => {
+      const i = +b.dataset.i;
+      if(i > 0 && !save().stars[i-1]){ b.classList.add('shake'); setTimeout(()=>b.classList.remove('shake'),400); return; }
+      renderIntro(i);
+    });
+  }
+
+  /* ---------- intro ---------- */
+  function renderIntro(i){
+    const L = LEVELS[i]; view = 'intro';
+    let body;
+    if(L.special === 'oops'){
+      body = `<p class="lead">Words from every level — and half of them are rule-breakers!</p>
+        <div class="tip">🕵️ Look at the ending, think of the rule… then ask yourself: <b>is this one a trap?</b></div>`;
+    } else if(L.special === 'boss'){
+      body = `<p class="lead">15 words from all the levels. You have <b>8 seconds</b> for each one!</p>
+        <div class="tip">🏆 Mix of rules and Oops words. Get 11 right to become a <b>Champion du genre</b>!</div>`;
+    } else {
+      body = `<p class="lead">Learn these rules:</p>
+        <div class="rules">${L.rules.map(k => { const R = RULES[k]; return `
+          <div class="rule ${R.g}"><b>${R.short}</b><span class="ar">→ ${R.g==='m'?'LE':'LA'}</span><small>${exampleFor(k) || ''}</small></div>`; }).join('')}
+        </div>
+        <div class="tip">🕵️ Watch out for <b>Oops words</b> — rule-breakers hiding in the level!</div>`;
+    }
+    app.innerHTML = `
+      <div class="top"><button class="back" id="bk">← Levels</button><div class="t">Niveau ${i+1}</div><div style="width:80px"></div></div>
+      <div class="intro"><div class="big">${L.emoji}</div><h2>${L.name}</h2>${body}
+      <button class="big-btn" id="go">C'est parti ! ▶</button></div>`;
+    document.getElementById('bk').onclick = renderMap;
+    document.getElementById('go').onclick = () => play(i);
+    keyHandler = e => { if(e.key === 'Enter'){ e.preventDefault(); play(i); } };
+  }
+
+  /* ---------- questions ---------- */
+  function balanced(pool, n){
+    const m = shuffle(pool.filter(w => w.g === 'm')), f = shuffle(pool.filter(w => w.g === 'f'));
+    let nm = Math.floor(n/2) + (Math.random() < .5 && n % 2 ? 1 : 0);
+    nm = Math.min(nm, m.length); let nf = Math.min(n - nm, f.length); nm = Math.min(n - nf, m.length);
+    return m.slice(0, nm).concat(f.slice(0, nf));
+  }
+  function build(i){
+    const L = LEVELS[i];
+    let pool, total, nEx;
+    if(L.special === 'oops'){ pool = ALL; total = 10; nEx = 5; }
+    else if(L.special === 'boss'){ pool = ALL; total = 15; nEx = 4; }
+    else { pool = L.words; total = 10; nEx = 2 + (Math.random() < .5 ? 1 : 0); }
+    const exc = pool.filter(w => w.ex);
+    const picked = take(exc, Math.min(nEx, exc.length));
+    return shuffle(picked.concat(balanced(pool.filter(w => !w.ex), total - picked.length)));
+  }
+
+  /* ---------- play ---------- */
+  function play(i){
+    stopTimers(); view = 'play';
+    const L = LEVELS[i];
+    const S = {i, qs: build(i), n: 0, score: 0, streak: 0, best: 0, oopsSeen: 0, oopsGot: 0, missed: [], timed: L.special === 'boss'};
+    S.oopsSeen = S.qs.filter(q => q.ex).length;
+    ask(S);
+  }
+
+  function ask(S){
+    stopTimers();
+    const q = S.qs[S.n], tot = S.qs.length;
+    let answered = false;
+    app.innerHTML = `
+      <div class="top"><button class="back" id="quit">✕</button>
+        <div class="prog"><div style="width:${S.n/tot*100}%"></div></div>
+        <div class="chip">🔥 ${S.streak}</div></div>
+      <div class="qc">Mot ${S.n+1} / ${tot}</div>
+      <div class="wcard" id="wc"><div class="w">${q.w}</div><div class="en">${q.en}</div>${S.timed?'<div class="timer" id="tm"></div>':''}</div>
+      <div class="ans">
+        <button class="ab m" data-g="m"><b>LE</b>un · masculine</button>
+        <button class="ab f" data-g="f"><b>LA</b>une · feminine</button>
+      </div>
+      <div class="keys">Keyboard: ← LE &nbsp;·&nbsp; LA →</div>
+      <div id="fb"></div>`;
+    document.getElementById('quit').onclick = () => { stopTimers(); renderMap(); };
+    app.querySelectorAll('.ab').forEach(b => b.onclick = () => answer(b.dataset.g));
+
+    if(S.timed){
+      const limit = 8000, t0 = Date.now(), tm = document.getElementById('tm');
+      every(() => {
+        const left = Math.max(0, 1 - (Date.now() - t0)/limit);
+        tm.style.width = (left*100) + '%';
+        tm.style.background = left < .3 ? '#E04B3A' : 'var(--sun)';
+        if(left === 0) answer(null);
+      }, 50);
+    }
+
+    function answer(g){
+      if(answered) return; answered = true; stopTimers();
+      const ok = g === q.g, R = RULES[q.rule];
+      if(ok){ S.score++; S.streak++; S.best = Math.max(S.best, S.streak); if(q.ex) S.oopsGot++; }
+      else { S.streak = 0; S.missed.push(q); }
+      app.querySelectorAll('.ab').forEach(b => { b.disabled = true; if(b.dataset.g !== q.g) b.classList.add('dim'); if(b.dataset.g === g) b.classList.add('pick'); });
+      const wc = document.getElementById('wc');
+      wc.classList.add(ok ? (q.ex ? 'oops' : 'good') : 'bad', ok ? 'pop' : 'shake');
+      app.querySelector('.top .chip').textContent = '🔥 ' + S.streak;
+      app.querySelector('.prog div').style.width = ((S.n+1)/tot*100) + '%';
+
+      const breaks = `Most <b>${R.short}</b> words are ${gname(R.g)}, but this one is <b>${gname(q.g)}</b>.`;
+      let cls, title, note;
+      if(ok && !q.ex){ cls='good'; title='✅ Bravo !'; note=R.note; sfx.good(); }
+      else if(ok && q.ex){ cls='oops'; title='🕵️ Oops word spotted — génial !'; note=breaks; sfx.oops(); }
+      else if(q.ex){ cls='oops'; title = g===null ? '⏰ Time\'s up — and it\'s an Oops word!' : '😮 Gotcha — it\'s an Oops word!'; note = breaks + ' Learn this one by heart!'; sfx.bad(); }
+      else { cls='bad'; title = g===null ? '⏰ Time\'s up!' : '❌ Pas tout à fait…'; note='Remember: ' + R.note; sfx.bad(); }
+
+      const last = S.n + 1 >= tot;
+      document.getElementById('fb').innerHTML = `
+        <div class="fb ${cls}"><div class="ft">${title}</div><div class="fp">${phrase(q)}</div>
+        <div class="fn">${note}</div>${q.extra?`<div class="fx">💡 ${q.extra}</div>`:''}</div>
+        <button class="big-btn blue next" id="nx">${last ? 'See results 🎉' : 'Next ▶'}</button>`;
+      const go = () => { S.n++; last ? results(S) : ask(S); };
+      document.getElementById('nx').onclick = go;
+      if(ok && !q.ex && !q.extra) later(go, 1300);   // keep the pace up on easy ones
+      keyHandler = e => { if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); go(); } };
+    }
+
+    keyHandler = e => {
+      if(e.key === 'ArrowLeft'){ e.preventDefault(); answer('m'); }
+      if(e.key === 'ArrowRight'){ e.preventDefault(); answer('f'); }
+    };
+  }
+
+  /* ---------- results ---------- */
+  function results(S){
+    stopTimers(); keyHandler = null;
+    const tot = S.qs.length, r = S.score / tot;
+    const stars = r >= 1 ? 3 : r >= .8 ? 2 : r >= .7 ? 1 : 0;
+    const d = save(); const prev = d.stars[S.i];
+    if(stars > prev){ d.stars[S.i] = stars; Progress.set(ID, d); }
+    const unlocked = stars > 0 && !prev && S.i < LEVELS.length - 1;
+    const boss = LEVELS[S.i].special === 'boss';
+    const head = stars === 3 ? (boss ? 'Champion du genre ! 👑' : 'Parfait !') : stars === 2 ? 'Très bien !' : stars === 1 ? 'Bien joué !' : 'Presque !';
+    const msg = stars === 0 ? `You need ${Math.ceil(tot*.7)} to pass — have another go!`
+              : unlocked ? `Level ${S.i+2} is now unlocked! 🔓`
+              : boss ? 'You beat the Grand Défi!' : `Best streak: 🔥 ${S.best}`;
+    app.innerHTML = `
+      <div class="res">
+        <div class="big">${stars === 0 ? '💪' : boss ? '🏆' : '🎉'}</div>
+        <h2>${head}</h2>
+        <div class="score">${S.score} / ${tot} correct</div>
+        <div class="stars">${starStr(stars)}</div>
+        <p class="msg">${msg}</p>
+        ${S.oopsSeen ? `<div class="oc">🕵️ Oops words spotted: ${S.oopsGot} / ${S.oopsSeen}</div>` : ''}
+        ${S.missed.length ? `<div class="review"><h3>📝 Words to practise</h3><ul>${S.missed.map(q =>
+            `<li>${phrase(q)}<small>${q.en}${q.ex ? ' · 🕵️ Oops word' : ''}</small></li>`).join('')}</ul></div>` : ''}
+        <div class="btns">
+          <button class="big-btn alt" id="again">↻ Rejouer</button>
+          ${stars > 0 && S.i < LEVELS.length - 1 ? `<button class="big-btn" id="nextL">Niveau ${S.i+2} ▶</button>` : ''}
+          <button class="big-btn blue" id="map">Levels</button>
+        </div>
+      </div>`;
+    document.getElementById('again').onclick = () => play(S.i);
+    document.getElementById('map').onclick = renderMap;
+    const nl = document.getElementById('nextL'); if(nl) nl.onclick = () => renderIntro(S.i + 1);
+    if(stars > 0){ sfx.win(); confetti(); }
+  }
+
+  return {start: renderMap, progress, _test: {LEVELS, ALL, RULES, build}};
+})();
+
+/* =====================================================================
+   HUB — add new games to this list
+   ===================================================================== */
+const GAMES = [
+  {id:'le-ou-la', title:'Le ou La ?', emoji:'🎯', bg:'linear-gradient(135deg,#2F6FDE 0%,#8A5CE0 55%,#E8457A 100%)',
+   blurb:'Masculine or feminine? Learn the word endings and catch the sneaky rule-breakers.', game: LeOuLa},
+];
+
+function syncLabel(){
+  const s = Progress.status();
+  return s === 'cloud' ? '☁️ Progress saved to your account' : s === 'loading' ? '⏳ Loading progress…' : '📱 Progress saved on this device';
+}
+
+function renderHub(){
+  keyHandler = null; view = 'hub';
+  const any = GAMES.some(g => g.game.progress().got > 0);
+  app.innerHTML = `
+    <header class="hub-head"><div class="flag">🇫🇷</div>
+      <h1>Mes Jeux de <span class="b">Fran</span><span class="w">ç</span><span class="r">ais</span></h1>
+      <p>Choisis un jeu ! · Pick a game to play</p></header>
+    <div class="grid">
+      ${GAMES.map(g => { const p = g.game.progress(); return `
+        <a class="card" href="#${g.id}" style="--bg:${g.bg}">
+          <div class="ce">${g.emoji}</div><h2>${g.title}</h2><p>${g.blurb}</p>
+          <div class="cp">⭐ ${p.got} / ${p.max}</div></a>`; }).join('')}
+      <div class="card soon"><div class="ce">✨</div><h2>Bientôt…</h2><p>More French games coming soon!</p></div>
+    </div>
+    <div class="foot"><span class="sync">${syncLabel()}</span>
+      ${any ? '<button class="link" id="rstall">↺ Reset all progress</button>' : ''}</div>`;
+  const r = document.getElementById('rstall');
+  if(r) r.onclick = () => confirmBox('Reset everything?', 'This clears the stars and levels in every game. It can’t be undone.', 'Reset all', () => { Progress.resetAll(); renderHub(); });
+}
+
+function route(){
+  stopTimers();
+  const g = GAMES.find(x => x.id === location.hash.slice(1));
+  g ? g.game.start() : renderHub();
+  window.scrollTo(0, 0);
+}
+window.addEventListener('hashchange', route);
+// when account progress arrives (or is reset), refresh the menus — never interrupt a game in progress
+Progress.onChange(() => { if(view === 'hub') renderHub(); else if(view === 'map') LeOuLa.start(); });
+route();
+Progress.connect();
+</script>
+</body>
+</html>
